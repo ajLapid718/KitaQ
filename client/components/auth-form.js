@@ -8,7 +8,7 @@ import {auth} from '../store'
  */
 const AuthForm = props => {
   const {name, displayName, handleSubmit, error} = props
-
+  let myImage = "http://tesseract.projectnaptha.com/img/eng_bw.png"
   return (
     <div>
       <form onSubmit={handleSubmit} name={name}>
@@ -17,6 +17,7 @@ const AuthForm = props => {
             <small>Email</small>
           </label>
           <input name="email" type="text" />
+          {console.log(Tesseract.recognize(myImage).then(result => console.log("output", result.text)))}
         </div>
         <div>
           <label htmlFor="password">
