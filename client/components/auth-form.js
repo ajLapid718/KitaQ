@@ -17,7 +17,7 @@ const AuthForm = props => {
             <small>Email</small>
           </label>
           <input name="email" type="text" />
-          {console.log(Tesseract.recognize(myImage).then(result => console.log(result.text)))}
+          {console.log(Tesseract.recognize(myImage).then(result => console.log("output", result.text)))}
         </div>
         <div>
           <label htmlFor="password">
